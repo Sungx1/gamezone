@@ -1,3 +1,12 @@
+const cors = require('cors');
+
+// Permitir acceso desde tu frontend
+app.use(cors({
+  origin: [
+    'https://gamehub.static.app', // Tu dominio real en Static.app
+    'http://localhost:5500'          // Para probar localmente
+  ]
+}));
 // server.js (Backend Node.js + SQLite)
 const express = require('express');
 const sqlite3 = require('sqlite3').verbose();
