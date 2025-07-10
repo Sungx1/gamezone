@@ -8,7 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 
-const db = new sqlite3.Database('./database.db');
+const db = new sqlite3.Database('/var/lib/data/database.db');
 
 // Crear tablas si no existen
 db.serialize(() => {
